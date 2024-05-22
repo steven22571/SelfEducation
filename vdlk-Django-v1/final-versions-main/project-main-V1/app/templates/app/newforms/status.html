@@ -1,0 +1,55 @@
+<div class="main-content">
+    <div class="section__content section__content--p30">
+        <div class="container row">
+            <div class="col-lg-6">
+                <div class="au-card m-b-30">
+                    <div class="au-card-inner">
+                        <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                            <div class="chartjs-size-monitor-expand" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                <div style="position: absolute; width: 1e+06px; height: 1e+06px; left: 0px; top: 0px;">
+                                </div>
+                            </div>
+                            <div class="chartjs-size-monitor-shrink" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                <div style="position: absolute; width: 200%; height: 200%; left: 0px; top: 0px;">
+                                </div>
+                            </div>
+                        </div> 
+                        <h3 class="title-2 m-b-40">Радар - ИТ Иммунитет</h3> 
+                        {{image_path2|safe}}
+                    </div>
+                </div>
+            </div> 
+            <div class="col-lg-6">
+                <div class="au-card m-b-30">
+                    <div class="au-card-inner">
+                        <h3 class="title-2 m-b-40">Общий ИТ Иммунитет</h3> 
+                        <div class="card">
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr class="danger" style="background-color:#fe6763">
+                                        <td class="coloured-cell">Критичных открытых уязвимостей</td> 
+                                        <td class="coloured-cell">{{crit}}</td>
+                                    </tr> 
+                                    <tr class="warning" style="background-color:#fe7400">
+                                        <td class="coloured-cell">Высокого уровня уязвимостей</td> 
+                                        <td class="coloured-cell">{{high}}</td>
+                                    </tr> 
+                                    <tr class="recommended" style="background-color:#ffc400">
+                                        <td class="coloured-cell">Среднего уровня уязвимостей</td> 
+                                        <td class="coloured-cell">{{mid}}</td>
+                                    </tr> 
+                                    <tr class="primary" style="background-color:#33cdfa">
+                                        <td class="coloured-cell">Низкого уровня уязвимостей</td> 
+                                        <td class="coloured-cell">{{low}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+                        {{image_path1|safe}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

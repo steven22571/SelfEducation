@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static '/myapp/animsition.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static '/myapp/bootstrap-datetimepicker.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static '/myapp/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static '/myapp/font-face.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static '/myapp/fontawesome-all.min.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static '/myapp/material-design-iconic-font.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static '/myapp/material-design-iconic-font.min.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static '/myapp/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static '/myapp/theme.css' %}">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
+
+
+  <link rel="stylesheet" type="text/css" href="{% static '/myapp/theme.css' %}">
+  <link rel="shortcut icon" href="/static/myapp/favicon.png" type="image/x-icon">
+  <title>Детектор уязвимостей - инструмент для постоянной проверки ИТ систем на открытые уязвимости</title>
+</head>
+<body>
+  <div class="stylish-div">
+  <div class="page-wrapper" style="display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;" >
+    <div class="page-content--bge5" >
+      <div class="container">
+        <div class="login-wrap">
+          <div class="login-content">
+            <div class="login-logo">
+              <a href="">
+                <img src="/static/myapp/logo.png" alt="ИТ Иммунитет" width="480" height="125" />
+              </a> 
+              
+            </div>
+            <div class="login-form">
+              <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="form-group">
+                  {{field.label_tag}}
+                  {{field}}
+                  {% if field.errors %}
+                  <div class="alert alert-danger">{{field.errors}}</div>
+                  {% endif %}
+                </div>
+                {% endfor %}
+                <script src="https://captcha-api.yandex.ru/captcha.js" defer></script>
+                <div
+                    id="captcha-container"
+                    class="smart-captcha"
+                    data-sitekey="ZJ8vfa7azUX3PF1nbHum66kwbOFzSZi7TLJpmsPO"
+                    >
+                </div>
+            
+
+                <Captcha/>
+                
+                <!-- КАПЧА ДЛЯ РЕГИСТРАЦИИ SMARTCAPCHA-->
+                <br>
+                <div class="login-checkbox">
+                  <label>
+                    <input type="checkbox" required>Согласен с условиями использования, включая <a href="https://vulndetector.ru/privacy-policy.php">Политику конфиденциальности</a><br><a href="https://vulndetector.ru/terms-conditions.php">Условия пользования</a><br><a href="https://vulndetector.ru/user-agreement.php">Договор оферты</a>
+                  </label>
+                </div>
+              
+
+                <div class="alert-danger m-b-15"></div>
+                <input type="submit" value="Регистрация" class="au-btn au-btn--block au-btn--green m-b-20" id="reg-btn">
+                {% if error_message %}
+                  <div class="alert-danger m-b-15">{{ error_message }}</div>
+                {% endif %}
+
+              
+              </form>
+              <div class="register-link">
+                <p>
+                  У Вас есть доступ?
+                  <a href="/login/">Войти</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{% static '/myapp/scripts/4139870.js' %}"></script>
+<script src="{% static '/myapp/scripts/3133201.js' %}"></script>
+<script src="{% static '/myapp/scripts/576d207.js' %}"></script>
+<script src="{% static '/myapp/scripts/618ccd7.js' %}"></script>
+<script src="{% static '/myapp/not_so_bas_scripts/errors.js' %}"></script>
+
+</body>
+</html>
+

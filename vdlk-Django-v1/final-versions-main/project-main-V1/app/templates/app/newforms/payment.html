@@ -1,0 +1,76 @@
+<div class="main-content">
+    <div class="section__content section__content--p30">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">Оплата</div>
+              <div class="card-body">
+                <div class="card-title">
+                  <h3 class="text-center title-2">Оплата картой</h3>
+                </div>
+                <hr>
+                <form action="" method="post" novalidate="novalidate" autocomplete="off">
+                  <div class="form-group">
+                    <label for="cc-payment" class="control-label mb-1">Сумма платежа</label>
+                    <select class="form-control">
+                      <option value="1">free</option>
+                      <option value="1000">1000 руб</option>
+                      <option value="5000">5000 руб</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="cc-number" class="control-label mb-1">Номер карты</label>
+                    <input type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" class="form-control cc-number identified visa">
+                    <span data-valmsg-for="cc-number" data-valmsg-replace="true" class="help-block"></span>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="cc-exp" class="control-label mb-1">Дата окончания</label>
+                        <div class="expiration">
+                          <input autocomplete="off" placeholder="MM" maxlength="2" size="2" class="form-control expiration-date">
+                          <span>/</span>
+                          <input autocomplete="off" placeholder="YY" maxlength="2" size="2" class="form-control expiration-date">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label for="x_card_code" class="control-label mb-1">CVV</label>
+                      <div class="input-group">
+                        <input type="text" autocomplete="off" maxlength="3" size="3" class="form-control cvv hidden-input">
+                      </div>
+                    </div>
+                  </div>
+                  <!---->
+                  <div>
+                    <button id="payment-button" type="button" class="btn btn-lg btn-info btn-block">
+                      <i class="fa fa-lock fa-lg"></i>&nbsp; <span>Перевести 1000р.</span>
+                      <span id="payment-button-sending" style="display: none;">Отправка…</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">Payments list</div>
+            <div class="card-body">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Дата</th>
+                    <th>Время</th>
+                    <th>Тариф</th>
+                    <th>Сумма оплаты</th>
+                    <th>Статус</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

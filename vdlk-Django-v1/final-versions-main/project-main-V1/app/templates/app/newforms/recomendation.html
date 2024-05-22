@@ -1,0 +1,31 @@
+<body>
+    {% if user_id %}
+        <p>User ID: {{ user_id }}</p>
+    {% endif %}
+
+    {% if ip %}
+        <p>IP Address: {{ ip }}</p>
+    {% endif %}
+
+    {% if hostname %}
+        <p>Hostname: {{ hostname }}</p>
+    {% endif %}
+
+    {% if cve_bdu_cnvd %}
+        <p>CVE/BDU/CNVD: {{ cve_bdu_cnvd }}</p>
+    {% endif %}
+
+    {% if risk %}
+        <p>Risk: {{ risk }}</p>
+    {% endif %}
+<div class="main-content">
+    <div class="section__content section__content--p30">
+      <div class="container-fluid">
+        {% for rec in recommendations %}
+            <div class="row">{{rec.0}}</div>
+            <div class="row">{{rec.1}}</div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,5 @@
+#content_container {
+  position: absolute;
+  top: 1000px; /* Установите расстояние сверху относительно родительского элемента */
+  left: 10000px;
+}

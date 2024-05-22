@@ -1,0 +1,47 @@
+<div class="main-content">
+  <div class="row container-fluid">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>Реквизиты компании</strong>
+          <small></small>
+        </div>
+        <div class="card-body card-block">
+          <form method="post" accept-charset="UTF-8"> 
+            {% csrf_token %}
+            {% for field in form %}
+          <div class="form-group">
+            {{field.label_tag}}
+            {{field}}
+            <!---->
+          </div>
+          {% endfor %}
+          <div class="card-footer">
+            <input type="submit" class="btn btn-primary btn-sm" value="Подтвердить">
+
+            <button type="reset" class="btn btn-danger btn-sm">
+              <i class="fa fa-ban"></i> Сбросить </button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header"> Список документов </div>
+        <div class="card-body">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Дата и время</th>
+                <th>Название</th>
+                <th>ссылка</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

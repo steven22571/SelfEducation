@@ -1,0 +1,52 @@
+<div class="main-content">
+    <div class="section__content section__content--p30">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <strong>Форма обратной связи</strong>
+                <small></small>
+              </div>
+              <div class="card-body card-block">
+                <div class="row form-group">
+                  <div class="col col-md-3">
+                    <label class="form-control-label">Что можно написать?</label>
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <p class="form-control-static">Здесь Вы можете рассказать про свой опыт использования VDLK, а также оставить предложения по улучшению или же коммерческие предложения</p>
+                  </div>
+                </div>
+                <form enctype="multipart/form-data" method="post">
+                  {% csrf_token %}
+                  {% for field in form1 %}
+                <div class="row form-group">
+                  <div class="col col-md-3">
+                    {{field.label_tag}}
+                  </div>
+                  <div class="col-12 col-md-9">
+                    {{field}}
+                    <!---->
+                  </div>
+                </div>
+                {% endfor %}
+                <!---->
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary btn-sm">
+                    <i class="fa fa-dot-circle-o"></i> Сохранить </button>
+                  <button type="reset" class="btn btn-danger btn-sm">
+                    <i class="fa fa-ban"></i> Сбросить </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
